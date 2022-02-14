@@ -37,6 +37,7 @@ public class CreateResourceAndVerifyInDatabase extends BaseApiClass {
 		String query = "select * from project;";
 		String actData=dLib.executeQueryAndGetData(query, 1, expData);
 		Reporter.log(actData,true);
+		System.out.println();
 		
 		//Step 5: validate
 		Assert.assertEquals(expData, actData);
